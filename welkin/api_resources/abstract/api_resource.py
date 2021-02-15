@@ -1,5 +1,6 @@
 import welkin
 
+
 class APIResource():
     @classmethod
     def class_url(cls):
@@ -11,5 +12,5 @@ class APIResource():
         api_base = welkin.api_base
         api_version = welkin.api_version
         object_name = cls.OBJECT_NAME
-        base = api_base+'/'+api_version+'/'+object_name
+        base = api_base + '/' + api_version + '/' + object_name
         return base
