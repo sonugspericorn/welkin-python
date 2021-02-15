@@ -2,6 +2,12 @@ import logging
 import requests
 from requests import HTTPError
 
+
+##export PYTHONWARNINGS="ignore:Unverified HTTPS request"
+
+import urllib3
+urllib3.disable_warnings(urllib3.exceptions.InsecureRequestWarning)
+
 logger = logging.getLogger("welkin")
 logger.setLevel(logging.DEBUG)
 

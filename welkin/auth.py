@@ -42,4 +42,5 @@ class Auth:
                                           scope,
                                           endpoint)
         headers = {"Authorization": "Bearer " + token}
+        print(headers)
         return headers
