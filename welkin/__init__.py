@@ -1,4 +1,4 @@
-from welkin.api_resources import * #noqa
+from welkin.api_resources import *  # noqa
 from welkin.auth import Auth
 
 # Welkin Python bindings
@@ -16,7 +16,6 @@ authorization = "https://api.welkinhealth.com/v1/token"
 
 # Set to either 'debug' or 'info', controls console logging
 log = None
-
 
 
 # Sets some basic information about the running application that's sent along

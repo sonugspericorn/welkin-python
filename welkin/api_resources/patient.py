@@ -1,10 +1,7 @@
-from welkin.api_resources.abstract import CreateableAPIResource
-from welkin.api_resources.abstract import UpdateableAPIResource
 
-class Patient(
-    CreateableAPIResource,
-    UpdateableAPIResource
-):
+from welkin.api_resources.abstract import CreateableAPIResource
+
+
+class Patient(CreateableAPIResource):
     OBJECT_NAME = "patients"
 
-    
