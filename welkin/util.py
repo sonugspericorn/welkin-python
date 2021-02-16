@@ -5,8 +5,8 @@ from requests import HTTPError
 
 ##export PYTHONWARNINGS="ignore:Unverified HTTPS request"
 
-import urllib3
-urllib3.disable_warnings(urllib3.exceptions.InsecureRequestWarning)
+##import urllib3
+##urllib3.disable_warnings(urllib3.exceptions.InsecureRequestWarning)
 
 logger = logging.getLogger("welkin")
 logger.setLevel(logging.DEBUG)
@@ -58,7 +58,7 @@ def process_request(url, headers=None, json_data=None, params=None, data=None, m
     r = None
     try:
         r = requests.request(method=method, url=url, headers=headers, params=params, data=data, json=json_data,
-                             verify=False)
+                             verify=True)
 
         # ppr.pprint_response(r)  # for testing the response
         response_string = 'Invalid Token.'

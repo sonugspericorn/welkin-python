@@ -5,7 +5,7 @@ import welkin
 import requests
 
 create_data = {
-    "phase": "intake",
+    "phase": "testing",
     "primary_worker_id": "1ecacc1f-1a4c-4bcb-9790-528642cba054",
     "timezone": "US/Pacific",
     "first_name": "Grace",
@@ -26,7 +26,7 @@ create_data = {
     "provider_id_number": "7IHnPI80"
 }
 c_data = {
-    "phase": "intake",
+    "phase": "testing",
     "timezone": "US/Pacific",
     "first_name": "Sonu",
     "last_name": "George",
@@ -37,7 +37,7 @@ class CreateableAPIResource(APIResource):
     def create(cls, client_id, client_secret, data):
         url = cls.class_url()
         headers = Auth().get_headers(client_id, client_secret)
-        data = create_data
+        data = c_data
         r_data = None
 ##        resp = requests.post(url, headers=headers, json=data).json()
 ##        print(resp)
