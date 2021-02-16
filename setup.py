@@ -18,5 +18,10 @@ setuptools.setup(
         "Operating System :: OS Independent",
     ],
     packages=setuptools.find_packages(),
+    install_requires=[
+        'arrow',
+        'PyJWT',
+        'requests'
+        ],
     python_requires='>=3.6',
 )
