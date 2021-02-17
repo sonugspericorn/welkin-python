@@ -37,11 +37,9 @@ class CreateableAPIResource(APIResource):
     def create(cls, client_id, client_secret, data):
         url = cls.class_url()
         headers = Auth().get_headers(client_id, client_secret)
-        data = c_data
+        data = create_data
         r_data = None
-##        resp = requests.post(url, headers=headers, json=data).json()
-##        print(resp)
-##        return resp
+
         try:
             resp = wu.process_request(url=url, headers=headers, json_data=data, method='post')
         except Exception as err:
